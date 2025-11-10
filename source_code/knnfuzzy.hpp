@@ -157,6 +157,16 @@ KNNResult<T> KNN<T>::_predict(const std::vector<std::vector<T>>& x_test) {
 
             test_membership[c] = numerator / denominator;
         }
+        
+        double total_membership = 0.0;
+        for (auto&[c,u]: test_membership){
+            total_membership += u;
+        }
+        if (total_membership > 0){
+            for (auto&[c,u]: test_membership){
+                test_membership[c] = u / total_membership;
+            }
+        }
 
         int prediction;
         double max_membership = 0;

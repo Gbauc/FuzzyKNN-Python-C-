@@ -5,7 +5,6 @@
 
 namespace py = pybind11;
 
-// Função auxiliar para converter numpy.ndarray -> std::vector<std::vector<T>>
 template <typename T>
 std::vector<std::vector<T>> numpy_to_vector(py::array_t<T> arr) {
     auto buf = arr.request();
