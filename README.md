@@ -8,8 +8,10 @@ First, get the `.so` file and `.py` file in the same folder. Then, you can start
 
 Instanciate the class, follows the same logic of scikit-learn models:
 
-```#Here I'm instanciating the class with k = 3 and m = 2
-knn = FuzzyKNN(3,2)```
+```
+#Here I'm instanciating the class with k = 3 and m = 2
+knn = FuzzyKNN(3,2)
+```
 
 Now, you can use `.fit()` and `.predict()` to your data and get the results:
 
