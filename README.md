@@ -15,14 +15,13 @@ knn = FuzzyKNN(3,2)
 
 Now, you can use `.fit()` and `.predict()` to your data and get the results:
 
-`#Fitting to training data
-
+```
+#Fitting to training data
 knn.fit(x_train, y_train)
-
 #Prediciting in test data
-
 knn.predict(x_test)
-`
+```
+
 The `.fit()` function will store the training data in memory and compute the fuzzy membership to each class of your classification problem to each training point. While the `.predict()` fuction will compute the fuzzy membership of the test data to each classes of your problem and chose the class with highest membership as the final predction.
 
 After calling the `.predict()` function, you can see the fuzzy membership to the test data by calling the `.get_memberships()` function:
